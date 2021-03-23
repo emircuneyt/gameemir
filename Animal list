@@ -1,0 +1,120 @@
+Animal list
+
+1 - Ostrich          01,02,03,04
+2 - Eagle			 05,06,07,08
+3 - Donkey			 09,10,11,12
+4 - Butterfly		 13,14,15,16
+5 - Dog				 17,18,19,20
+6 - Goat			 21,22,23,24
+7 - Sheep			 25,26,27,28
+8 - Camel			 29,30,31,32
+9 - Snake			 33,34,35,36
+10 - Rabbit			 37,38,39,40
+11 - Horse			 41,42,43,44
+12 - Elephant		 45,46,47,48
+13 - Rooster		 49,50,51,52
+14 - Cat			 53,54,55,56
+15 - Alligator		 57,58,59,60
+16 - Lion			 61,62,63,64
+17 - Monkey			 65,66,67,68
+18 - Pig			 69,70,71,72
+19 - Peacock		 73,74,75,76
+20 - Turkey			 77,78,79,80
+21 - Bull			 81,82,83,84
+22 - Tiger			 85,86,87,88
+23 - Bear			 89,90,91,92
+24 - Deer			 93,94,95,96
+25 - Cow			 97,98,99,00
+
+girilen bet sayisini, acilan kutuda (bet sayiis kadar) tamamlarsa, maksimum kazanc
+
+
+
+Simple 1
+
+1 hayvan seciliyor > ilk kutuda (bet sayisi = kutunun durumu) hayvan cikarsa > 12x
+				   > ilk kutu dusunda cikarsa, kutu no > 1 > 3x
+
+2 hayvan 		   > ilk IKI kutuda cikarsa > 95x
+				   > ilk iki kutu disinda cikarsa > 12x
+				   > sadece BIR hayvan cikarsa > 1x
+
+3 hayvan 		   > ilk uc kutuda cikarsa > 700x
+				   > ilk uc kutudan sonra ise > 42
+				   > 2 hayvan cikarsa > 3x
+				   > 1 hayvan cikarsa > 0.75x
+
+4 hayvan 		   > ilk 4 kutuda cikarsa > 4000x
+				   > ilk 4 kutu disinda cikarsa > 500x
+				   > 3 hayvan cikarsa > 22x
+				   > 2 hayvan cikarsa > 1.5x
+				   > 1 hayvan cikarsa > 0.2x
+
+5 hayvan 		   > Full cikarsa > 17000x
+				   > 4 hayvan > 150x
+				   > 3 hayvan > 8x
+				   > 2 hayvan > 1x
+				   > 1 hayvan > 0.2x
+				    
+
+
+
+
+				    Mantik
+
+- her sekilde 5 tane hayvan kutudan cikiyor
+- oyuncu amaci sectigi hayanlari, sectigi kadarki kutu icerisinde cikarmak
+-
+
+
+
+oyun 0-100 arasi sayi seciyor 0 dahil 100 degil
+sectigi sayi veritabanindan hangi hayvana denk ise gosteriyor
+
+
+
+
+CREATE TABLE animalsBetID (
+     id MEDIUMINT NOT NULL AUTO_INCREMENT,
+     name CHAR(30) NOT NULL,
+     PRIMARY KEY (id)
+);
+
+INSERT INTO animalsBetID (name) VALUES
+    ('00'),('01'),('02'),
+    ('03'),('04'),('05'),
+    ('06'),('07'),('08'),
+    ('09'),('10'),('11'),
+    ('12'),('13'),('14'),
+    ('15'),('16'),('17'),
+    ('18'),('19'),('20'),
+    ('21'),
+    ('22'),('23'),('24'),
+    ('25'),('26'),('27'),
+    ('28'),('29'),('30'),
+    ('31'),('32'),('33'),
+    ('34'),('35'),('36'),
+    ('37'),('38'),('39'),
+    ('40'),('41'),('42'),
+    ('43'),('44'),('45'),
+    ('46'),('47'),('48'),
+    ('49'),('50'),('51'),
+    ('52'),('53'),('54'),
+    ('55'),('56'),('57'),
+    ('58'),('59'),('60'),
+    ('61'),('62'),('63'),
+    ('64'),('65'),('66'),
+    ('67'),('68'),('69'),
+    ('70'),('71'),('72'),
+    ('73'),('74'),('75'),
+    ('76'),('77'),('78'),
+    ('79'),('80'),('81'),
+    ('82'),('83'),('84'),
+    ('85'),('86'),('87'),
+    ('88'),('89'),('90'),
+    ('91'),('92'),('93'),
+    ('94'),('95'),('96'),
+    ('97'),('98'),('99');
+
+SELECT * FROM animalsBetID;
+
